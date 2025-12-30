@@ -10,4 +10,5 @@
       ]
     }
   }
+  "postCreateCommand": "dotnet workload install maui"
 }
