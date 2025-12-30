@@ -9,6 +9,6 @@
         "VisualStudioToolsForUnity.vstuc"
       ]
     }
-  }
+  },
   "postCreateCommand": "dotnet workload install maui"
 }
