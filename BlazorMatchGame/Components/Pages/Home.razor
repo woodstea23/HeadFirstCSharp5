@@ -2,6 +2,55 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<style>
+    .container {
+        width: 400px;
+    }
 
-Welcome to your new app.
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        @foreach (var animal in shuffledAnimals)
+        {
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-dark">
+                    <h1>@animal</h1>
+                </button>
+
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    List<string> animalEmoji = new List<string> [
+       "🐶","🐶",
+       "🐺","🐺",
+       "🐮","🐮",
+       "🦊","🦊",
+       "😺","😺",
+       "🦁","🦁",
+       "🐯","🐯",
+       "🐹","🐹"
+    ];
+
+    List<string> shuffledAnimals = new List<string>();
+
+    protected override void OnInitialized()
+    {
+        SetUpGame();
+    }
+
+    private void SetUpGame()
+    {
+        shuffledAnimals = animalEmoji
+            .OrderBy(item => Random.Shared.Next())
+            .ToList();
+    }
+}
