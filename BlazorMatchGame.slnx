@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/ch01vsc/">
+    <Project Path="ch01vsc/MyFirstConsoleApp/MyFirstConsoleApp.csproj" />
+  </Folder>
   <Project Path="BlazorMatchGame/BlazorMatchGame.csproj" />
 </Solution>
