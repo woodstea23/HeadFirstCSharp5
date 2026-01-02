@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "maui: Build",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "-t:Build",
+                "-p:Configuration=Debug",
+                "-f",
+                "net10.0-maccatalyst",
+                "-r",
+                "maccatalyst-arm64",
+                "${workspaceFolder}/AnimalMatchingGame/AnimalMatchingGame.csproj"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
